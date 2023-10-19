@@ -33,7 +33,7 @@ export default function Home() {
           <h1 className="uppercase text-center font-extrabold text-2xl">Catálogo de itens disponíveis</h1>
         </div>
         <div className="w-full my-5">
-          <ul className="flex flex-wrap gap-3 justify-center">
+          <ul className="flex gap-3 flex-wrap justify-center">
             {list.map((item, index) => {
               return (
                 <li key={index} className="w-[290px] bg-slate-50 cursor-pointer hover:scale-105 transition">

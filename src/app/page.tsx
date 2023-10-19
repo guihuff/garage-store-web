@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Banner from "@/assets/livingroom.jpg";
+import { Footer } from "@/components/Footer";
 
 const list = ['item 1', 'item 2', 'item 3', 'item 4', 'item 5']
 
@@ -55,6 +56,7 @@ export default function Home() {
           </ul>
         </div>
       </section>
+      <Footer />
     </main>
   )
 }

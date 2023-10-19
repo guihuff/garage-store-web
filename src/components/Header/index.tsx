@@ -9,10 +9,10 @@ export function Header () {
         <nav className="font-medium">
           <ul className="flex h-14 items-center justify-start gap-2">
             <li>
-              <Link href={"/"} className="px-3 py-2 hover:text-emphasis-background transition	rounded-xl">Home</Link>
+              <Link href={"/"} className="px-3 py-2 hover:text-emphasis-background transition">Home</Link>
             </li>
             <li>
-              <Link href={"/info"} className="px-3 py-2 hover:text-emphasis-background transition	rounded-xl">Info</Link>
+              <Link href={"/info"} className="px-3 py-2 hover:text-emphasis-background transition">Info</Link>
             </li>
           </ul>
         </nav>

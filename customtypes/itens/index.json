@@ -1,0 +1,103 @@
+{
+  "id": "itens",
+  "label": "itens",
+  "format": "custom",
+  "repeatable": true,
+  "status": true,
+  "json": {
+    "Main": {
+      "uid": {
+        "config": {
+          "label": "UID"
+        },
+        "type": "UID"
+      },
+      "title": {
+        "type": "StructuredText",
+        "config": {
+          "label": "title",
+          "placeholder": "Nome do item",
+          "allowTargetBlank": true,
+          "single": "paragraph"
+        }
+      },
+      "description": {
+        "type": "StructuredText",
+        "config": {
+          "label": "description",
+          "placeholder": "",
+          "allowTargetBlank": true,
+          "single": "paragraph"
+        }
+      },
+      "qnt": {
+        "type": "Number",
+        "config": {
+          "label": "qnt",
+          "placeholder": ""
+        }
+      },
+      "price": {
+        "type": "StructuredText",
+        "config": {
+          "label": "price",
+          "placeholder": "",
+          "allowTargetBlank": true,
+          "single": "paragraph"
+        }
+      },
+      "code": {
+        "type": "StructuredText",
+        "config": {
+          "label": "code",
+          "placeholder": "",
+          "allowTargetBlank": true,
+          "single": "paragraph"
+        }
+      },
+      "image": {
+        "type": "Image",
+        "config": {
+          "label": "image",
+          "constraint": {
+            "width": null,
+            "height": null
+          },
+          "thumbnails": []
+        }
+      },
+      "image_two": {
+        "type": "Image",
+        "config": {
+          "label": "image two",
+          "constraint": {},
+          "thumbnails": []
+        }
+      },
+      "image_three": {
+        "type": "Image",
+        "config": {
+          "label": "image three",
+          "constraint": {},
+          "thumbnails": []
+        }
+      },
+      "image_four": {
+        "type": "Image",
+        "config": {
+          "label": "image four",
+          "constraint": {},
+          "thumbnails": []
+        }
+      },
+      "link_whats": {
+        "type": "Link",
+        "config": {
+          "label": "link whats",
+          "placeholder": "",
+          "select": null
+        }
+      }
+    }
+  }
+}

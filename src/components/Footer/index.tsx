@@ -18,7 +18,7 @@ export function Footer () {
           <h3>ghuff@alunos.utfpr.edu.br</h3>
           <h3>ghuffg00@gmail.com</h3>
         </div>
-        <Link href="/contact" className="bg-emerald-500 py-5 px-4 hover:text-zinc-500 transition">
+        <Link href="https://wa.me/5551995119425?text=Ol%C3%A1%2C+vim+pelos+itens+usados%21" target="_blank" className="bg-emerald-500 py-5 px-4 hover:text-zinc-500 transition">
           Contatar
         </Link>
       </div>

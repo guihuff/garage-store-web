@@ -5,7 +5,7 @@ export function Header () {
   return (
     <header className="w-full h-14 bg-header-background text-header-foreground">
       <div className="container m-auto flex justify-start items-center gap-5">
-        <h1 className="font-light text-xl">bazarG</h1>
+        <Link href={"/"}  className="font-light text-xl">bazarG</Link>
         <nav className="font-medium">
           <ul className="flex h-14 items-center justify-start gap-2">
             <li>
@@ -16,7 +16,9 @@ export function Header () {
             </li>
           </ul>
         </nav>
-        <Link href="/contact" className="ml-auto hover:text-green-500 transition">
+        <Link href={"https://wa.me/5551995119425?text=Ol%C3%A1%2C+vim+pelos+itens+usados%21"} 
+          target="_blank" 
+          className="ml-auto hover:text-green-500 transition">
           <AiOutlineWhatsApp size={25} />
         </Link>
       </div>

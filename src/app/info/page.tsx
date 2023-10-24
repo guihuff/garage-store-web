@@ -58,6 +58,12 @@ export default function Home() {
             Caso você ache que algum preço não corresponde ao valor do item, sinta-se à vontade para fazer uma nova proposta.
           </p>
         </div>
+        <div className="w-full flex flex-col md:flex-row my-5 md:items-center p-3">
+          <h3 className="font-bold w-60 mr-2">Tem frete?</h3>
+          <p className="md:w-[80%]">
+            Em todos os itens o frete é por conta do comprador, o comprador deve retirar os itens no apartamento.
+          </p>
+        </div>
 
       </section>
       <Footer />

@@ -117,6 +117,17 @@ interface ItensDocumentData {
    * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
    */
   link_whats: prismic.LinkField;
+
+  /**
+   * long description field in *itens*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: itens.long_description
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   */
+  long_description: prismic.RichTextField;
 }
 
 /**

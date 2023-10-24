@@ -97,6 +97,15 @@
           "placeholder": "",
           "select": null
         }
+      },
+      "long_description": {
+        "type": "StructuredText",
+        "config": {
+          "label": "long description",
+          "placeholder": "",
+          "allowTargetBlank": true,
+          "multi": "paragraph,strong,em,o-list-item,list-item"
+        }
       }
     }
   }

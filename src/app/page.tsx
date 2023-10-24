@@ -1,10 +1,30 @@
 import Image from "next/image";
 import Banner from "@/assets/livingroom.jpg";
 import { Footer } from "@/components/Footer";
+import { createClient } from "@/prismicio";
+import * as prismicH from '@prismicio/helpers';
 
-const list = ['item 1', 'item 2', 'item 3', 'item 4', 'item 5']
 
-export default function Home() {
+export default async function Home() {
+  const client = createClient();
+
+  const response = await client.getAllByType('itens', {
+    lang: 'pt-br'
+  });
+
+  const itens = response.map(item => {
+    return {
+      uid: item.uid,
+      title: prismicH.asText(item.data.title),
+      description: prismicH.asText(item.data.description),
+      qnt: item.data.qnt,
+      price: prismicH.asText(item.data.price),
+      code: prismicH.asText(item.data.code),
+      image: item.data.image,
+      link: prismicH.asLink(item.data.link_whats)
+    }
+  });
+
   return (
     <main className="w-full">
       <section className='md:h-80 w-full flex flex-col md:flex-row justify-center items-center md:gap-8 my-5 overflow-hidden'>
@@ -34,22 +54,24 @@ export default function Home() {
         </div>
         <div className="w-full my-5">
           <ul className="flex gap-3 flex-wrap justify-center">
-            {list.map((item, index) => {
+            {itens.map((item) => {
               return (
-                <li key={index} className="w-[290px] bg-slate-50 cursor-pointer hover:scale-105 transition">
+                <li key={item.uid} className="w-[290px] h-[389.5px] overflow-hidden bg-slate-50 cursor-pointer hover:scale-105 transition">
                   <Image 
-                    src={'https://cdn.pixabay.com/photo/2016/11/19/15/50/chair-1840011_1280.jpg'} 
-                    width={290} height={100} quality={100} alt={`Imagem ${item}`}
+                    src={item.image.url ? item.image.url : ''} 
+                    width={290} height={100} quality={100} alt={`Imagem ${item.title}`}
                   />
                   <article className="mt-1 p-3">
-                    <h2 className="font-medium">{item}</h2>
-                    <h3 className="font-bold flex justify-between"><span>qnt: 1</span><span>R$ 30,00</span></h3>
-                    <p className="text-sm text-zinc-500">
-                      Uma breve descrição do item em questão
+                    <h2 className="font-medium">{item.title}</h2>
+                    <h3 className="font-bold flex justify-between"><span>qnt: {item.qnt}</span><span>R$ {item.price}</span></h3>
+                    <p className="text-sm text-zinc-500 line-clamp-2">
+                      {item.description}
                     </p>
-                    <h4 className="text-zinc-600 text-xs">COD: 00001</h4> 
+                    <h4 className="text-zinc-600 text-xs">COD: {item.code}</h4> 
                   </article>
-                  <button className="w-full h-10 flex justify-center items-center bg-emphasis-background text-background-start hover:text-zinc-600 transition">Comprar</button>
+                  <button className="w-full h-10 flex justify-center items-center bg-emphasis-background text-background-start hover:text-zinc-600 transition">
+                    Comprar
+                  </button>
                 </li>
               )
             })}

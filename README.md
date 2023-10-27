@@ -1,4 +1,4 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+Este projeto tem como objetivo anunciar os meus itens usados de forma mais fácil, eliminando a necessidade de postar todos os itens nos grupos do WhatsApp. Ele foi criado devido à necessidade de vender os meus móveis usados após concluir o curso de Ciência da Computação.
 
 ## Getting Started
 

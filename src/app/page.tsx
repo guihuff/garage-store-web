@@ -3,7 +3,9 @@ import Banner from "@/assets/livingroom.jpg";
 import { Footer } from "@/components/Footer";
 import { createClient } from "@/prismicio";
 import * as prismicH from '@prismicio/helpers';
+import Link from "next/link";
 
+export const revalidate = 60 * 2;
 
 export default async function Home() {
   const client = createClient();
@@ -57,10 +59,12 @@ export default async function Home() {
             {itens.map((item) => {
               return (
                 <li key={item.uid} className="w-[290px] h-[389.5px] overflow-hidden bg-slate-50 cursor-pointer hover:scale-105 transition">
-                  <Image 
-                    src={item.image.url ? item.image.url : ''} 
-                    width={290} height={100} quality={100} alt={`Imagem ${item.title}`}
-                  />
+                  <Link href={`item/${item.uid}`}>
+                    <Image 
+                      src={item.image.url ? item.image.url : ''} 
+                      width={290} height={100} quality={100} alt={`Imagem ${item.title}`}
+                    />
+                  
                   <article className="mt-1 p-3">
                     <h2 className="font-medium">{item.title}</h2>
                     <h3 className="font-bold flex justify-between"><span>qnt: {item.qnt}</span><span>R$ {item.price}</span></h3>
@@ -69,9 +73,10 @@ export default async function Home() {
                     </p>
                     <h4 className="text-zinc-600 text-xs">COD: {item.code}</h4> 
                   </article>
-                  <button className="w-full h-10 flex justify-center items-center bg-emphasis-background text-background-start hover:text-zinc-600 transition">
+                  </Link>
+                  <Link href={item.link ? item.link : '/'} className="w-full h-10 flex justify-center items-center bg-emphasis-background text-background-start hover:text-zinc-600 transition">
                     Comprar
-                  </button>
+                  </Link>
                 </li>
               )
             })}

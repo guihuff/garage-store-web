@@ -46,7 +46,7 @@ export default async function Home() {
       <section className="relative w-full flex flex-col items-center">
         <div className="h-[230px] md:h-[360px] w-full bg-emphasis-background"></div>
         <Image src={Banner} alt="Imagem banner sala de estar" quality={100}
-          className="w-[80%] object-cover h-[250px] md:h-[350px] translate-y-1/4 absolute object-bottom"
+          className="w-[80%] object-cover h-[250px] md:h-[350px] translate-y-1/4 absolute object-bottom bg-zinc-200"
         />
         <div className="h-[130px] md:h-[140px] w-full bg-background-start"></div>
       </section>

@@ -52,11 +52,12 @@ export default async function Item({ params }: ItemPageProps) {
           <div className="flex flex-col w-64 items-end gap-2">
             <h2 className="text-4xl font-extrabold">R$ {item.price}</h2>
             <h2 className="font-light">Quantidade: {item.qnt}</h2>
-            {item.link_whats && 
-              <Link href={item.link_whats} className="w-full h-16 flex justify-center items-center bg-emphasis-background text-background-start hover:text-zinc-600 transition">
-                Comprar
-              </Link>
-            }
+            <Link href={`https://api.whatsapp.com/send?phone=5551995119425&text=Bom dia, vim pelos móveis usados, estou buscando o item: ${item.title}, código: ${item.code}`} 
+              className="w-full h-16 flex justify-center items-center bg-emphasis-background text-background-start hover:text-zinc-600 transition"
+            >
+              Comprar
+            </Link>
+            
             
           </div>
         </section>

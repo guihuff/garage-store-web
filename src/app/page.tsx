@@ -78,6 +78,7 @@ export default async function Home() {
                   <Link 
                     href={`https://api.whatsapp.com/send?phone=5551995119425&text=Bom dia, vim pelos móveis usados, estou buscando o item: ${item.title}, código: ${item.code}`} 
                     className="w-full h-10 flex justify-center items-center bg-emphasis-background text-background-start hover:text-zinc-600 transition"
+                    target="_blank"
                   >
                     Comprar
                   </Link>

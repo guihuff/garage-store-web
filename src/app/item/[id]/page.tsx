@@ -14,7 +14,7 @@ export default async function Item({ params }: ItemPageProps) {
 
   const response = await client.getByUID('itens', params.id, {
     fetchOptions: {
-      cache: 'no-store',
+      cache: 'no-cache',
       next: { tags: ['prismic', 'itens'] },
     },
     lang: 'pt-br'

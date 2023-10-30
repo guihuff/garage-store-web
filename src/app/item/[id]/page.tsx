@@ -13,6 +13,10 @@ export default async function Item({ params }: ItemPageProps) {
   const client = createClient();
 
   const response = await client.getByUID('itens', params.id, {
+    fetchOptions: {
+      cache: 'no-store',
+      next: { tags: ['prismic', 'itens'] },
+    },
     lang: 'pt-br'
   });
 

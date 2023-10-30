@@ -5,8 +5,6 @@ import { createClient } from "@/prismicio";
 import * as prismicH from '@prismicio/helpers';
 import Link from "next/link";
 
-export const revalidate = 60 * 2;
-
 export default async function Home() {
   const client = createClient();
 
@@ -63,13 +61,13 @@ export default async function Home() {
                     <Image 
                       src={item.image.url ? item.image.url : ''} 
                       width={290} height={170} quality={100} alt={`Imagem ${item.title}`}
-                      className="w-[290px] h-[239.5px] object-contain"
+                      className="w-[290px] h-[220px] object-contain"
                     />
                   
                   <article className="mt-1 p-3">
                     <h2 className="font-medium">{item.title}</h2>
                     <h3 className="font-bold flex justify-between"><span>qnt: {item.qnt}</span><span>R$ {item.price}</span></h3>
-                    <p className="text-sm text-zinc-500 line-clamp-2">
+                    <p className="text-sm text-zinc-500 line-clamp-2 h-10">
                       {item.description}
                     </p>
                     <h4 className="text-zinc-600 text-xs">COD: {item.code}</h4> 

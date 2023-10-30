@@ -23,7 +23,7 @@ export function ImagesView ({ images }: ImagesViewProps) {
                 onClick={() => setActiveImage(index)}
               >
                 <Image src={item} alt={`Imagem numero ${index}`}  width={300} height={180}
-                  className="md:w-32 object-contain" 
+                  className="md:w-32 max-h-[100px] object-contain" 
                 />
               </button>
             )

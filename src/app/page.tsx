@@ -62,7 +62,8 @@ export default async function Home() {
                   <Link href={`item/${item.uid}`}>
                     <Image 
                       src={item.image.url ? item.image.url : ''} 
-                      width={290} height={100} quality={100} alt={`Imagem ${item.title}`}
+                      width={290} height={170} quality={100} alt={`Imagem ${item.title}`}
+                      className="w-[290px] h-[239.5px] object-contain"
                     />
                   
                   <article className="mt-1 p-3">
@@ -74,7 +75,10 @@ export default async function Home() {
                     <h4 className="text-zinc-600 text-xs">COD: {item.code}</h4> 
                   </article>
                   </Link>
-                  <Link href={item.link ? item.link : '/'} className="w-full h-10 flex justify-center items-center bg-emphasis-background text-background-start hover:text-zinc-600 transition">
+                  <Link 
+                    href={`https://api.whatsapp.com/send?phone=5551995119425&text=Bom dia, vim pelos móveis usados, estou buscando o item: ${item.title}, código: ${item.code}`} 
+                    className="w-full h-10 flex justify-center items-center bg-emphasis-background text-background-start hover:text-zinc-600 transition"
+                  >
                     Comprar
                   </Link>
                 </li>

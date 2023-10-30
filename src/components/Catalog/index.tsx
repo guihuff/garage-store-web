@@ -7,10 +7,14 @@ export async function Catalog() {
   const client = createClient();
 
   const response = await client.getAllByType('itens', {
+    fetchOptions: {
+      cache: 'no-store',
+      next: { tags: ['prismic', 'itens'] },
+    },
     lang: 'pt-br', 
     orderings: {
       field: 'document.first_publication_date'
-    }
+    },
   });
 
   const itens = response.map(item => {

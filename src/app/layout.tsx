@@ -3,13 +3,12 @@ import { Montserrat } from 'next/font/google'
 import './globals.css'
 import { ToastContainer } from 'react-toastify'
 import { Header } from '@/components/Header'
-import { PrismicPreview } from '@prismicio/next'
 
 const montserrat = Montserrat({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
   title: 'Bazar de Garagem',
-  description: 'Site para demonstrar itens que estou vendendo em Santa-Helena',
+  description: 'Itens usados anunciados por Guilherme Huff em Santa-Helena - PR',
 }
 
 export default function RootLayout({
